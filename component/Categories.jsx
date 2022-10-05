@@ -8,6 +8,7 @@ function Categories(props) {
    const [categories, setCategories] = useState([])
 
    useEffect(() => {
+      console.log('Subhanalloh')
       getCategories().then(result => setCategories(result))
    }, [])
 

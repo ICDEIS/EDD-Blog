@@ -7,9 +7,9 @@ import { getRelatedLastPost } from '../service/mainQuery';
 
 function RelatedLastPost({ slug, categories }) {
    const [lastPost, setLastPost] = useState([])
-   console.log(lastPost);
 
    useEffect(() => {
+      console.log('Subhanalloh')
       getRelatedLastPost(slug, categories)
          .then(result => setLastPost(result))
    }, [slug])

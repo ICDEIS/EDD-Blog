@@ -16,12 +16,18 @@ function PostDetails({ post }) {
          }
       }
       switch (type) {
+         case 'heading-one':
+            return <h1 key={index}>{dynamicText.map((item, idx) => <React.Fragment key={idx}>{item}</React.Fragment>)}</h1>
+         case 'heading-two':
+            return <h2 key={index}>{dynamicText.map((item, idx) => <React.Fragment key={idx}>{item}</React.Fragment>)}</h2>
          case 'heading-three':
             return <h3 key={index}>{dynamicText.map((item, idx) => <React.Fragment key={idx}>{item}</React.Fragment>)}</h3>
          case 'heading-four':
             return <h4 key={index}>{dynamicText.map((item, idx) => <React.Fragment key={idx}>{item}</React.Fragment>)}</h4>
          case 'heading-five':
             return <h5 key={index}>{dynamicText.map((item, idx) => <React.Fragment key={idx}>{item}</React.Fragment>)}</h5>
+         case 'heading-six':
+            return <h6 key={index}>{dynamicText.map((item, idx) => <React.Fragment key={idx}>{item}</React.Fragment>)}</h6>
          case 'paragraph':
             return <p key={index}>{dynamicText.map((item, idx) => <React.Fragment key={idx}>{item}</React.Fragment>)}</p>
          case 'image':
