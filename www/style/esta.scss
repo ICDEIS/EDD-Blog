@@ -1,0 +1,26 @@
+
+
+$blue-light: rgb(205, 233, 255);
+
+html,
+body,
+#root {
+   height: 100%;
+}
+
+#__next {
+   height: 100%;
+   overflow-x: hidden
+}
+.layout {
+   min-height: 100%;
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+   scroll-behavior: smooth;
+   background-image: url('../../public/main-img.jpeg');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   scroll-behavior: smooth;
+}

@@ -1,0 +1,80 @@
+
+
+$blue-light: rgb(107, 129, 255);
+
+*,
+*::before,
+*::after {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: montserrat, 'Microsoft Sans Serif', gotham;
+}
+
+a {
+   text-decoration: none;
+}
+
+.bt {
+   border: none;
+   outline: none;
+   font-size: 1.1rem;
+   padding: 6px 15px;
+   border-radius: 5px;
+   background-color: $blue-light;
+   color: white;
+   margin: 5px 0;
+   &:hover {
+      background-color: darken($blue-light, 3%);
+   }
+}
+.bt-scale {
+   &:active {
+      transform: scale(1.05);
+   }
+}
+.e-input {
+   outline: none;
+   font-size: 1.1rem;
+   padding: 5px 10px;
+   border-radius: 5px;
+   border: 1px solid $blue-light;
+   font-family: roboto mono;
+   // margin-right: 5px;
+   &::placeholder {
+      font-family: montserrat;
+      opacity: .8;
+   }
+   &:focus {
+      box-shadow: 0 0 3px 1px rgb(231, 195, 255);
+   }
+}
+.wd-100 {
+   width: 100%;
+}
+.green-bt {
+   background-color: rgb(125, 202, 57);
+   color: white;
+   padding: 5px 10px;
+   border-radius: 3px;
+   border: none;
+   outline: none;
+   &:hover {
+      color: white;
+   }
+}
+.go-back {
+   border: none;
+   outline: none;
+   background-color: $blue-light;
+   color: white;
+   padding: 8px 15px;
+   border-radius: 5px;
+   margin-bottom: 15px;
+   &:hover {
+      background-color: darken($blue-light, 5%);
+   }
+   &:active {
+      transform: scale(1.03);
+   }
+}
