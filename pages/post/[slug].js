@@ -8,10 +8,12 @@ import Comments from '../../component/Comments';
 import PostAuthor from '../../component/PostAuthor';
 import PostDetails from '../../component/PostDetails';
 import PostWidget from '../../component/PostWidget';
+import RelatedLastPost from '../../component/RelatedLastPost';
 import { getPost, getPosts } from '../../service/mainQuery';
 import Loadere from '../../www/ui/Loader/Loadere';
 
 function SinglePost({post}) {
+   // console.log(post);
    const router = useRouter()
 
    if(router.isFallback) {
@@ -23,8 +25,11 @@ function SinglePost({post}) {
          <div className=' post-details-cona'>
             <PostDetails post={post} />
             <PostAuthor author={post.author} />
-            <Comments slug={post.slug}/>
+            <RelatedLastPost slug={post.slug} categories={post.categories.map(catg => catg.slug)} />
             <AddComment slug={post.slug} />
+            <Comments slug={post.slug}/>
+         </div>
+         <div>
          </div>
          <div className='sp-related'>
             <PostWidget slug={post.slug} categories={post.categories.map(catg => catg.slug)} />

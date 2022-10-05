@@ -16,6 +16,7 @@ function Comments({ slug }) {
       <div className='comments'>
          <h5 className='mb-2'>{comments.length} Comments</h5>
          <span className='e-line w-100 opacity-50 my-2'></span>
+         {!comments.length && <h5 className='text-center pt-3'>No comment yet</h5>}
          {comments.map(item => (
             <div className='c-content' key={item.createdAt}>
                <div className='cc-name-date'>

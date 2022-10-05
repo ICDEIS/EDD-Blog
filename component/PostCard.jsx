@@ -21,7 +21,7 @@ function PostCard({ post }) {
          </div>
          <p className='pc-text'>{post.excerpt}</p>
          <div className='pc-link'>
-            <Link href={`/post/${post.slug}`} className='e-link'><span className='e-btn'>Read all</span></Link>
+            <Link href={`/post/${post.slug}`} className='e-link'><span className='e-btn'>Read more</span></Link>
          </div>
       </div>
    );
